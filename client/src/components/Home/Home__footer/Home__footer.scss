@@ -1,0 +1,152 @@
+/* ------ Home Footer ------*/
+@import "../../../Theme.scss";
+
+.home__footer {
+  background-color: $green;
+  height: 150px;
+
+  @include flexbox;
+  .home__footer__logo {
+    // background-color: lightgreen;
+    width: 45%;
+    height: 70px;
+    @include flexbox;
+    justify-content: flex-start;
+    align-items: flex-end;
+    img {
+      height: 50px;
+    }
+  }
+
+  .home__footer__text {
+    // background-color: lightcoral;
+    height: 70px;
+    width: 45%;
+    display: flex;
+    p {
+      // background-color: lightgray;
+      width: 100%;
+      text-align: right;
+      align-self: flex-end;
+      color: $white;
+    }
+  }
+}
+
+//Media Queries
+
+// ----- WIDTH -----
+
+// MAX-WIDTH : 900px
+@media (max-width: "900px") {
+  .home__footer {
+    height: 100px;
+    .home__footer__logo {
+      width: 40%;
+      img {
+        height: 45px;
+      }
+    }
+
+    .home__footer__text {
+      width: 50%;
+    }
+  }
+}
+// MAX-WIDTH : 700px
+@media (max-width: "700px") {
+  .home__footer {
+    height: 100px;
+    .home__footer__logo {
+      width: 30%;
+      img {
+        height: 40px;
+      }
+    }
+
+    .home__footer__text {
+      width: 60%;
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+}
+// MAX-WIDTH : 600px
+@media (max-width: "600px") {
+  .home__footer {
+    height: 100px;
+    .home__footer__logo {
+      width: 30%;
+      height: 70px;
+      img{
+        height: 40px;
+      }
+    }
+
+    .home__footer__text {
+      width: 60%;
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+}
+// MAX-WIDTH : 550px
+@media (max-width: "550px") {
+  .home__footer {
+    height: 100px;
+    .home__footer__logo {
+      width: 30%;
+      height: 70px;
+      img{
+        height:30px;
+      }
+    }
+
+    .home__footer__text {
+      width: 60%;
+      p {
+        font-size: 12px;
+      }
+    }
+  }
+}
+// MAX-WIDTH : 400px
+@media (max-width: "400px") {
+  .home__footer {
+    height: 100px;
+    .home__footer__logo {
+      width: 35%;
+      height: 70px;
+      img{
+        height:25px;
+      }
+    }
+
+    .home__footer__text {
+      width: 55%;
+      p {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+// @media only screen and (max-width: 480px) {
+//   .home__footer__text p {
+//     font-size: 9px;
+//     line-height: 10px;
+//   }
+// }
+// @media only screen and (max-width: 480px) {
+//   .home__footer {
+//     height: 100px;
+//   }
+// }
+// @media only screen and (max-width: 480px) {
+//   .home__footer__logo img {
+//     height: 30px;
+//     width: 105px;
+//   }
+// }

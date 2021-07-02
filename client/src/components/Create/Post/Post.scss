@@ -1,0 +1,79 @@
+.post {
+  .rectangle {
+    width: 663px;
+    height: 823px;
+    margin: auto;
+    margin-top: auto;
+    border: 2px solid #4a4a4a;
+  }
+  .texts {
+    font-size: 24px;
+    color: #e16120;
+    text-align: center;
+  }
+
+  @mixin box() {
+    border: 1px solid #4b9b96;
+    border-radius: 50px;
+  }
+  .editform {
+    padding: 20px;
+    form {
+      .titles {
+        color: #4b9b96;
+        font-size: 15px;
+        // padding:20px;
+      }
+      .msg-box {
+        width: 595px;
+        // margin:20px;
+        border: 1px solid #4b9b96;
+        border-radius: 20px;
+
+        &::placeholder {
+          color: #4b9b96;
+          font-size: 15px;
+        }
+      }
+    }
+  }
+
+  .BtnGrp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .CancelBtn {
+      padding: 10px 40px;
+      text-align: center;
+      font-size: 16px;
+      border: 1px solid #4b9b96;
+      border-radius: 20px;
+      background-color: white;
+      color: #4b9b96;
+      display: inline-block;
+      cursor: pointer;
+      margin: 30px;
+
+      &:hover {
+        background-color: #a1dbd7;
+      }
+    }
+    .Savebtn {
+      padding: 10px 40px;
+      text-align: center;
+      font-size: 16px;
+      border: 1px solid #4b9b96;
+      border-radius: 20px;
+      background-color: #4b9b96;
+      color: White;
+      display: inline-block;
+      cursor: pointer;
+      margin: 30px;
+
+      &:hover {
+        background-color: #a1dbd7;
+      }
+    }
+  }
+}

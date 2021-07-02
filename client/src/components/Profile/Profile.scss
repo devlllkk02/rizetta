@@ -1,0 +1,366 @@
+/* ------ Profile ------*/
+@import "../../Theme.scss";
+
+.profile {
+  margin-top: 20px;
+
+  .profile__header {
+    width: 100%;
+    min-height: 200px;
+    // background-color: burlywood;
+    border-bottom: 1px solid rgba($color: $grey, $alpha: 0.2);
+    // @include flexbox;
+    .profile__header__container {
+      // background-color: cadetblue;
+      min-height: 200px;
+      width: 90%;
+      margin: 0px auto;
+
+      @include flexbox;
+
+      .profile__header__image {
+        // background-color: darkslateblue;
+        width: 160px;
+        min-height: 200px;
+        // @include flexbox;
+        img {
+          margin-top: 20px;
+          width: 160px;
+          height: 160px;
+          border-radius: 50%;
+          border: 3px solid $orange;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+
+      .profile__header__details {
+        // background-color: lightyellow;
+        min-height: 200px;
+        width: calc(100% - 285px);
+
+        @include flexbox;
+        justify-content: flex-start;
+
+        flex-direction: column;
+
+        .profile__header__details__name {
+          // background-color: lightpink;
+          height: 50px;
+          width: 90%;
+          @include flexbox;
+          margin-top: 20px;
+          justify-content: flex-start;
+          p {
+            font-size: 20px;
+            color: $green;
+          }
+        }
+
+        .profile__header__details__total {
+          // background-color: lightcoral;
+          min-height: 30px;
+          width: 90%;
+
+          @include flexbox;
+          justify-content: flex-start;
+
+          .profile__header__details__recipes {
+            // background-color: lightgreen;
+            height: 100%;
+            width: 34%;
+            @include flexbox;
+            justify-content: flex-start;
+            p {
+              color: $orange;
+              font-size: 14px;
+            }
+          }
+          .profile__header__details__following {
+            // background-color: lightseagreen;
+            height: 100%;
+            width: 33%;
+            @include flexbox;
+            justify-content: flex-start;
+            p {
+              color: $orange;
+              font-size: 14px;
+            }
+          }
+          .profile__header__details__followers {
+            // background-color: lightslategray;
+            height: 100%;
+            width: 33%;
+            @include flexbox;
+            justify-content: flex-start;
+            p {
+              color: $orange;
+              font-size: 14px;
+            }
+          }
+        }
+
+        .profile__header__details__bio {
+          // background-color: yellowgreen;
+          min-height: 50px;
+          width: 90%;
+
+          p {
+            color: $grey;
+            font-size: 14px;
+            padding: 5px 0px;
+            text-align: justify;
+          }
+        }
+      }
+
+      .profile__header__buttons {
+        // background-color: lightsalmon;
+        min-height: 200px;
+        width: 125px;
+        @include flexbox;
+        align-items: flex-start;
+        justify-content: flex-end;
+
+        .profile__header__button__unfollow {
+          // background-color: lightcoral;
+          // width: 50%;
+          @include flexbox;
+          margin-top: 20px;
+          justify-content: flex-end;
+          button {
+            @include ButtonGreenLight;
+            width: 125px;
+          }
+        }
+        .profile__header__button__edit {
+          // background-color: lightgreen;
+          // width: 50%;
+          @include flexbox;
+          margin-top: 20px;
+          justify-content: flex-end;
+          button {
+            @include ButtonGreenDark;
+            width: 125px;
+          }
+        }
+      }
+    }
+  }
+
+  .profile__body {
+    width: 90%;
+    min-height: 400px;
+    // background-color: lightgreen;
+    margin: 0px auto;
+    margin-top: 20px;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 270px);
+    grid-row-gap: 30px;
+    justify-content: space-between;
+
+    // .profile__item {
+    //   width: 250px;
+    //   height: 325px;
+    //   // background-color: lightcoral;
+
+    //   border: 1px solid rgba($color: $grey, $alpha: 0.2);
+
+    //   // &:nth-child(odd) {
+    //   //   //   background-color: teal;
+    //   // }
+
+    //   .profile__item__image {
+    //     width: 250px;
+    //     height: 175px;
+    //     // background-color: lightblue;
+
+    //     img {
+    //       width: 249px;
+    //       height: 175px;
+    //       object-fit: cover;
+    //       object-position: center;
+    //       cursor: pointer;
+    //     }
+    //   }
+    //   .profile__item__title {
+    //     width: 100%;
+    //     height: 40px;
+    //     // background-color: lightyellow;
+    //     @include flexbox;
+    //     p {
+    //       color: $green;
+    //       font-size: 14px;
+    //       text-align: center;
+    //       padding: 0px 5px;
+    //     }
+    //   }
+    //   .profile__item__description {
+    //     width: 100%;
+    //     height: 70px;
+    //     // background-color: lightpink;
+    //     @include flexbox;
+    //     align-items: flex-start;
+    //     p {
+    //       color: $grey;
+    //       font-size: 12px;
+    //       text-align: center;
+    //       padding: 0px 5px;
+    //     }
+    //   }
+    //   .profile__item__ratings {
+    //     // background-color: lightgreen;
+    //     height: 40px;
+    //     width: 100%;
+    //     @include flexbox;
+    //     .profile__item__heart {
+    //       width: 110px;
+    //       height: 100%;
+    //       // background-color: lightcoral;
+    //       @include flexbox;
+
+    //       .profile__item__heart__icon {
+    //         width: 40px;
+    //         height: 100%;
+    //         // background-color: lightgrey;
+    //         @include flexbox;
+    //         cursor: pointer;
+
+    //         .icon__heartEmpty {
+    //           color: $grey;
+    //         }
+    //         .icon__heartFill {
+    //           color: $red;
+    //         }
+    //       }
+    //       .profile__item__heart__text {
+    //         width: 70px;
+    //         height: 100%;
+    //         // background-color: lightyellow;
+    //         @include flexbox;
+
+    //         p {
+    //           font-size: 11px;
+    //           color: $grey;
+    //         }
+    //       }
+    //     }
+    //     .profile__item__stars {
+    //       width: 140px;
+    //       height: 100%;
+    //       // background-color: lightblue;
+    //       @include flexbox;
+    //       .profile__item__stars__text {
+    //         width: 40px;
+    //         // background-color: lightslategray;
+    //         height: 100%;
+    //         @include flexbox;
+
+    //         p {
+    //           font-size: 11px;
+    //           color: $grey;
+    //         }
+    //       }
+    //       .profile__item__stars__icon {
+    //         width: 100px;
+    //         // background-color: lightyellow;
+    //         height: 100%;
+    //         @include flexbox;
+    //       }
+    //     }
+    //   }
+    // }
+  }
+}
+
+//Media Queries
+
+// ----- WIDTH -----
+
+
+// MAX-WIDTH : 700px
+@media (max-width: "700px") {
+  .profile {
+    .profile__header {
+      .profile__header__container {
+        flex-direction: column;
+
+        :nth-child(1) {
+          order: 1;
+        }
+        :nth-child(2) {
+          order: 3;
+        }
+        :nth-child(3) {
+          order: 2;
+        }
+
+        .profile__header__image {
+          width: 100%;
+          @include flexbox;
+          img {
+            margin-top: 0px;
+          }
+        }
+        .profile__header__details {
+          width: 100%;
+          
+
+          .profile__header__details__name {
+            justify-content: center;
+            margin-top: 0px;
+            width: 100%;
+          }
+          .profile__header__details__bio {
+            width: 100%;
+            p {
+              text-align: center;
+              padding: 20px 0px;
+            }
+          }
+          .profile__header__details__total {
+            flex-direction: column;
+            width: 100%;
+            margin-bottom: 20px;
+            .profile__header__details__recipes {
+              width: 100%;
+              height: 35px;
+              justify-content: center;
+            }
+            .profile__header__details__followers {
+              width: 100%;
+              height: 35px;
+              justify-content: center;
+            }
+            .profile__header__details__following {
+              width: 100%;
+              height: 35px;
+              justify-content: center;
+            }
+          }
+        }
+
+        .profile__header__buttons {
+          min-height: 50px;
+          width: 100%;
+          @include flexbox;
+
+          .profile__header__button__unfollow {
+            margin-top: 0px;
+          }
+          .profile__header__button__edit {
+            margin-top: 0px;
+          }
+        }
+      }
+    }
+
+    .profile__body {
+      grid-template-columns: 100%;
+      .card {
+        margin: 0px auto;
+      }
+    }
+  }
+}

@@ -1,0 +1,234 @@
+/* ------ Profile ------*/
+@import "../../../Theme.scss";
+
+.edit {
+  // background-color: lightblue;
+  width: 100%;
+  margin-top: 20px;
+
+  .edit__container {
+    width: 500px;
+    // background-color: lightgreen;
+    margin: 0px auto;
+    padding: 20px;
+    border: 1px solid rgba($color: $grey, $alpha: 0.2);
+    .edit__userimage {
+      // background-color: lightcoral;
+      img {
+        height: 160px;
+        width: 160px;
+        border-radius: 50%;
+        border: 3px solid $orange;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+
+    .edit__upload {
+      // background-color: pink;
+      margin-top: 20px;
+      @include flexbox;
+      .edit__upload__button {
+        height: 100%;
+        width: 130px;
+        // background-color: lightcoral;
+        @include flexbox;
+        padding-right: 10px;
+        label {
+          @include flexbox;
+          width: 100%;
+          padding: 8px 5px;
+          background-color: $green;
+          color: $white;
+
+          border: 2px solid rgba($color: $green, $alpha: 1);
+          border-radius: 20px;
+          font-size: 14px;
+          font-weight: 600;
+          transition: all 0.5s ease-in-out;
+          &:hover {
+            cursor: pointer;
+            border: 2px solid $green;
+            color: $green;
+            background-color: transparent;
+          }
+        }
+      }
+      .edit__upload__text {
+        height: 100%;
+        width: calc(100% - 130px);
+        // background-color: lightcyan;
+        @include flexbox;
+        input[type="file"] {
+          display: none;
+        }
+        input[type="text"] {
+          @include textbox;
+        }
+      }
+    }
+
+    .edit__username {
+      width: 100%;
+      height: 80px;
+      // background-color: lightyellow;
+      @include flexbox;
+      .edit__firstname {
+        // background-color: lightcoral;
+        width: 50%;
+        height: 100%;
+        @include flexbox;
+        justify-content: flex-start;
+        input {
+          @include textbox;
+          width: 90%;
+        }
+      }
+      .edit__lastname {
+        // background-color: lightgrey;
+        width: 50%;
+        height: 100%;
+        @include flexbox;
+        justify-content: flex-end;
+        input {
+          @include textbox;
+          width: 90%;
+        }
+      }
+    }
+
+    .edit__bio {
+      width: 100%;
+      min-height: 175px;
+
+      textarea {
+        @include textbox;
+        margin-top: 10px;
+        min-height: 150px;
+        resize: vertical;
+        color: $grey;
+      }
+    }
+
+    .edit__delete {
+      margin-top: 40px;
+      // background-color: lightseagreen;
+      width: 100%;
+      @include flexbox;
+      flex-direction: column;
+      .edit__delete__text {
+        p {
+          font-size: 14px;
+          color: $grey;
+          text-align: center;
+        }
+      }
+      .edit__delete__box {
+        width: 100%;
+        margin-top: 20px;
+
+        input {
+          @include textbox;
+          width: 100%;
+        }
+      }
+      .edit__delete__button {
+        margin-top: 40px;
+        width: 100%;
+        // background-color: lightgreen;
+
+        @include flexbox;
+        // justify-content: flex-start;
+        button {
+          @include ButtonGreenLight;
+          width: 180px;
+
+          &:hover {
+            background-color: $red;
+            border-color: $red;
+          }
+        }
+      }
+    }
+    .edit__buttons {
+      width: 100%;
+      height: 50px;
+      // background-color: lightcoral;
+      @include flexbox;
+      margin-top: 10px;
+      .edit__button__cancel {
+        // background-color: lightyellow;
+        width: 50%;
+        height: 100%;
+        // margin-right: 10px;
+        @include flexbox;
+        justify-content: flex-start;
+        button {
+          @include ButtonGreenLight;
+          width: 200px;
+        }
+      }
+      .edit__button__update {
+        // background-color: lightgrey;
+        width: 50%;
+        height: 100%;
+        // margin-left: 10px;
+        @include flexbox;
+        justify-content: flex-end;
+        button {
+          @include ButtonGreenDark;
+          width: 200px;
+        }
+      }
+    }
+  }
+}
+
+// ----- WIDTH -----
+
+// MAX-WIDTH : 600px
+@media (max-width: "600px") {
+  .edit {
+    .edit__container {
+      width: 90%;
+
+      .edit__username {
+        flex-direction: column;
+        height: 120px;
+
+        .edit__firstname {
+          width: 100%;
+          input {
+            width: 100%;
+          }
+        }
+        .edit__lastname {
+          width: 100%;
+          input {
+            width: 100%;
+          }
+        }
+      }
+
+      .edit__buttons {
+        .edit__button__cancel {
+          justify-content: flex-start;
+          margin: 0px;
+          button {
+            margin-right: 10px;
+          }
+        }
+        .edit__button__update {
+          justify-content: flex-end;
+          margin: 0px;
+          button {
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+  }
+}

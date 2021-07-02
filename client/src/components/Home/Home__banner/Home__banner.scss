@@ -1,0 +1,209 @@
+/* ------ Home Banner ------*/
+@import "../../../Theme.scss";
+
+.home__banner {
+  height: 100vh;
+  width: 100%;
+  background-image: url("../HomeBG/Home_BG.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  .home__banner__container {
+    // background-color: lightgreen;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-height: 350px;
+    max-width: 900px;
+
+    .home__banner__logo {
+      // background-color: lightcoral;
+      height: 100px;
+      @include flexbox;
+      img {
+        height: 70px;
+      }
+    }
+
+    .home__banner__slogan {
+      // background-color: lightblue;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 48px;
+      text-align: center;
+      color: $grey;
+    }
+
+    .home__banner__content1 {
+      // background-color: lightcoral;
+      height: 50px;
+      font-size: 16px;
+      text-align: center;
+      color: $grey;
+      @include flexbox;
+    }
+    .home__banner__content2 {
+      // background-color: lightgrey;
+      height: 25px;
+      font-size: 14px;
+      text-align: center;
+      color: $orange;
+      @include flexbox;
+    }
+
+    .home__buttons {
+      // background-color: lightcoral;
+      height: 100px;
+      width: 100%;
+      @include flexbox;
+      .home__buttons__signup {
+        margin-right: 10px;
+        button {
+          @include ButtonGreenDark;
+        }
+      }
+      .home__buttons__login {
+        margin-left: 10px;
+        button {
+          @include ButtonGreenLight;
+        }
+      }
+    }
+  }
+}
+
+//Media Queries
+
+// ----- WIDTH -----
+
+// MAX-WIDTH : 900px
+@media (max-width: "900px") {
+  .home__banner {
+    .home__banner__container {
+      .home__banner__logo {
+        img {
+          height: 55px;
+        }
+      }
+    }
+  }
+}
+
+// MAX-WIDTH : 700px
+@media (max-width: "700px") {
+  .home__banner {
+    .home__banner__container {
+      .home__banner__logo {
+        img {
+          height: 50px;
+        }
+      }
+      .home__banner__content1 {
+        p {
+          padding: 0px 10px;
+        }
+      }
+    }
+  }
+}
+// MAX-WIDTH : 500px
+@media (max-width: "500px") {
+  .home__banner {
+    .home__banner__container {
+      .home__banner__content1 {
+        min-height: 70px;
+        p{
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+
+// ----- HEIGHT -----
+
+// MAX-HEIGHT : 350px
+@media (max-height: "350px") {
+  .home__banner {
+    height: calc(2 * 100vh);
+    // height: 500px;
+    .home__banner__container {
+      .home__banner__logo {
+        img {
+          height: 55px;
+        }
+      }
+    }
+  }
+}
+
+// @media only screen and (max-width: 480px) {
+//   .sign__in {
+//     width: 100%;
+//     .sign__in__button {
+//       padding: 8px 32px;
+//       font-size: 14px;
+//     }
+//   }
+// }
+
+// @media only screen and (max-width: 480px) {
+//   .home__banner {
+//     width: 100vw;
+//     overflow-x: hidden;
+//   }
+// }
+
+// @media only screen and (max-width: 480px) {
+//   .home__banner__logo {
+//     margin-top: 150px;
+//   }
+// }
+// @media only screen and (max-width: 480px) {
+//   .home__banner__logo img {
+//     width: 201px;
+//     height: 57px;
+//   }
+// }
+
+// @media only screen and (max-width: 480px) {
+//   .sign__up {
+//     width: 100%;
+//     .sign__up__button {
+//       padding: 8px 32px;
+//       font-size: 14px;
+//     }
+//   }
+// }
+// @media only screen and (max-width: 480px) {
+//   .home__banner__slogan {
+//     font-size: 20px;
+//     line-height: 36px;
+//   }
+// }
+
+// @media only screen and (max-width: 480px) {
+//   .home__banner__content1 {
+//     font-size: 16px;
+//     line-height: 24px;
+//   }
+// }
+
+// @media only screen and (max-width: 480px) {
+//   .home__banner__content2 {
+//     font-size: 16px;
+//   }
+// }
+
+// @media only screen and (max-width: 480px) {
+//   .home__buttons {
+//     margin-top: 8%;
+//     margin-left: 0;
+//     margin-right: 0;
+//   }
+// }

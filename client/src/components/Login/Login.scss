@@ -1,0 +1,262 @@
+/* ------ Login ------*/
+@import "../../Theme.scss";
+
+.login {
+  background-image: url("../BackgroundImages/Background1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  @include flexbox;
+
+  .login__container {
+    height: 525px;
+    width: 500px;
+    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba($color: $white, $alpha: 0.4);
+
+    .login__form {
+      // background-color: lightblue;
+      width: 100%;
+      height: 100%;
+      padding: 30px;
+
+      .login__form__header {
+        width: 100%;
+        height: 50px;
+        // background-color: lightgreen;
+        @include flexbox;
+
+        .login__form__header__image {
+          height: 70px;
+  
+        }
+      }
+
+      .login__form__body {
+        margin-top: 20px;
+        .login__body__item {
+          width: 100%;
+          height: 55px;
+            // background-color: lightyellow;
+          @include flexbox;
+          //   &:nth-child(odd) {
+          // background-color: lightcoral;
+          //   }
+        }
+        .login__name {
+          .login__name__first {
+            width: 50%;
+            height: 100%;
+            // background-color: lightgreen;
+            @include flexbox;
+            padding-right: 5px;
+            input {
+              @include textbox;
+            }
+          }
+          .login__name__last {
+            width: 50%;
+            height: 100%;
+            // background-color: lightgrey;
+            @include flexbox;
+            padding-left: 5px;
+            input {
+              @include textbox;
+            }
+          }
+        }
+
+        .login__email,
+        .login__password,
+        .login__conpassword {
+          input {
+            @include textbox;
+          }
+        }
+
+        .login__upload {
+          .login__upload__button {
+            height: 100%;
+            width: 30%;
+            // background-color: lightgreen;
+            @include flexbox;
+            padding-right: 10px;
+            label {
+              @include flexbox;
+              width: 100%;
+              padding: 8px 10px;
+              background-color: $green;
+              color: $white;
+
+              border: 2px solid rgba($color: $green, $alpha: 1);
+              border-radius: 20px;
+              font-size: 14px;
+              font-weight: 600;
+              transition: all 0.5s ease-in-out;
+              &:hover {
+                cursor: pointer;
+                border: 2px solid $green;
+                color: $green;
+                background-color: transparent;
+              }
+            }
+          }
+          .login__upload__text {
+            height: 100%;
+            width: 70%;
+            // background-color: lightcyan;
+            @include flexbox;
+            input[type="file"] {
+              display: none;
+            }
+            input[type="text"] {
+              @include textbox;
+            }
+          }
+        }
+      }
+
+      .login__button {
+        width: 100%;
+        height: 55px;
+        // background-color: lightgreen;
+        margin-top: 10px;
+        @include flexbox;
+        button {
+          @include ButtonGreenDark;
+          width: 150px;
+        }
+      }
+
+      .login__links {
+        width: 100%;
+        height: 75px;
+        // background-color: lightcoral;
+        margin-top: 5px;
+        @include flexbox;
+        flex-direction: column;
+        p {
+          text-align: center;
+          font-size: 14px;
+          color: $grey;
+        }
+
+        .login__link {
+          width: 100%;
+          font-size: 14px;
+          text-decoration: none;
+          color: $orange;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+
+//Media Queries
+
+// ----- WIDTH -----
+
+// MAX-WIDTH : 600px
+@media (max-width: "600px") {
+  .login {
+    .login__container {
+      width: 450px;
+
+      .login__form {
+        .login__form__header {
+          .login__form__header__image {
+            height: 60px;
+          }
+        }
+        .login__form__body {
+          .login__upload {
+            .login__upload__button {
+              width: 130px;
+            }
+            .login__upload__text {
+              width: calc(100% - 130px);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// MAX-WIDTH : 500px
+@media (max-width: "500px") {
+  .login {
+    .login__container {
+      width: 400px;
+
+      .login__form {
+        .login__form__header {
+          .login__form__header__image {
+            height: 50px;
+          }
+        }
+        .login__form__body {
+          .login__upload {
+            .login__upload__button {
+              width: 130px;
+            }
+            .login__upload__text {
+              width: calc(100% - 130px);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// MAX-WIDTH : 400px
+@media (max-width: "400px") {
+  .login {
+    .login__container {
+      width: 90%;
+      height: 600px;
+      .login__form {
+        .login__form__header {
+          .login__form__header__image {
+            height: 40px;
+          }
+        }
+        .login__form__body {
+          .login__name {
+            flex-direction: column;
+            height: 110px;
+            .login__name__first {
+              width: 100%;
+              padding: 0px;
+            }
+            .login__name__last {
+              width: 100%;
+              padding: 0px;
+            }
+          }
+          .login__upload {
+            .login__upload__button {
+              width: 130px;
+            }
+            .login__upload__text {
+              width: calc(100% - 130px);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//Media Queries
+
+// ----- HEIGHT -----
+// MAX-HEIGHT : 400px
+@media (max-height: "400px") {
+  .login {
+    height: calc(2* 100vh);
+  }
+}

@@ -1,0 +1,159 @@
+/* ------ Search User------*/
+@import "../../../Theme.scss";
+
+.searchUser {
+  width: 100%;
+  min-height: 600px;
+  // background-color: lightcoral;
+  margin-top: 20px;
+
+  .searchUser__searchbar {
+    // background-color: lightgreen;
+    width: 500px;
+    height: 60px;
+    margin: 0px auto;
+    // background-color: lightpink;
+    @include flexbox;
+    position: relative;
+
+    input {
+      @include textbox;
+      padding-right: 35px;
+    }
+
+    .icon__search {
+      position: absolute;
+      right: 15px;
+
+      color: rgba($color: $green, $alpha: 0.4);
+    }
+  }
+
+  .searchUser__nav {
+    width: 500px;
+    height: 50px;
+    margin: 0px auto;
+    // background-color: lightpink;
+    @include flexbox;
+    .searchUser__nav__left {
+      // background-color: lightgrey;
+      width: 50%;
+      height: 100%;
+      @include flexbox;
+
+      p {
+        color: $orange;
+        font-size: 14px;
+        font-weight: 500;
+        cursor: pointer;
+      }
+    }
+    .searchUser__nav__right {
+      //   background-color: lightseagreen;
+      width: 50%;
+      height: 100%;
+      @include flexbox;
+
+      p {
+        color: $orange;
+        font-size: 14px;
+        font-weight: 500;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .searchUser__border {
+    // background-color: lightgreen;
+    width: 500px;
+    height: 5px;
+    margin: 0px auto;
+    @include flexbox;
+
+    .searchUser__border__left {
+      height: 100%;
+      width: 50%;
+      background-color: $orange;
+      border-bottom: 2px solid rgba($color: $orange, $alpha: 1);
+    }
+    .searchUser__border__right {
+      // background-color: lightyellow;
+
+      height: 100%;
+      width: 50%;
+
+      border-bottom: 2px solid rgba($color: $orange, $alpha: 0.4);
+    }
+  }
+
+  .searchUser__list {
+    width: 500px;
+    margin: 0px auto;
+    .searchUser__item {
+      // background-color: lightyellow;
+      width: 100%;
+      height: 70px;
+      margin-top: 2px;
+      border-bottom: 1px solid rgba($color: $grey, $alpha: 0.2);
+
+      @include flexbox;
+      .searchUser__item__image {
+        //   background-color: teal;
+        height: 100%;
+        width: 70px;
+        @include flexbox;
+        img {
+          height: 55px;
+          width: 55px;
+          border-radius: 50%;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+      .searchUser__item__name {
+        $width: 200px;
+        // background-color: pink;
+        height: 100%;
+        width: calc(100% - 70px);
+        @include flexbox;
+        justify-content: flex-start;
+
+        p {
+          color: $grey;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+//Media Queries
+
+// ----- WIDTH -----
+
+// MAX-WIDTH : 600px
+@media (max-width: "600px") {
+  .searchUser {
+    .searchUser__searchbar {
+      width: 90%;
+    }
+    .searchUser__nav {
+      width: 90%;
+    }
+    .searchUser__border {
+      width: 90%;
+    }
+    .searchUser__list {
+      width: 90%;
+
+      .searchUser__item{
+        .searchUser__item__image{
+          img{
+            width: 45px;
+            height: 45px;
+          }
+        }
+      }
+    }
+  }
+}

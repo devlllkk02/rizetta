@@ -1,0 +1,214 @@
+/* ------ Feed ------*/
+@import "../../Theme.scss";
+
+.feed {
+  width: 90%;
+  min-height: 700px;
+  // background-color: lightgreen;
+  margin: 0px auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 270px);
+  grid-row-gap: 30px;
+  justify-content: space-between;
+
+  // .feed__item {
+  //   width: 250px;
+  //   height: 375px;
+  //   // background-color: lightcoral;
+
+  //   border: 1px solid rgba($color: $grey, $alpha: 0.2);
+
+  //   // &:nth-child(odd) {
+  //   //   background-color: teal;
+  //   // }
+
+  //   .feed__item__header {
+  //     width: 100%;
+  //     height: 50px;
+  //     // background-color: lightpink;
+  //     @include flexbox;
+  //     .feed__item__user__image {
+  //       // background-color: lightcoral;
+  //       width: 50px;
+  //       height: 50px;
+
+  //       @include flexbox;
+  //       img {
+  //         height: 40px;
+  //         width: 40px;
+
+  //         object-fit: cover;
+  //         object-position: center;
+
+  //         border-radius: 50%;
+
+  //         //   border: 2px solid rgba($color: $green, $alpha: 0.8);
+  //       }
+  //     }
+
+  //     .feed__item__user__details {
+  //       // background-color: lightyellow;
+  //       width: 170px;
+  //       height: 50px;
+  //       @include flexbox;
+  //       flex-direction: column;
+  //       .feed__item__user__name {
+  //         width: 100%;
+  //         height: 20px;
+  //         // background-color: lightgreen;
+  //         @include flexbox;
+  //         justify-content: flex-start;
+
+  //         p {
+  //           color: $grey;
+  //           font-size: 12px;
+  //         }
+  //       }
+  //       .feed__item__user__date {
+  //         width: 100%;
+  //         height: 20px;
+  //         // background-color: thistle;
+  //         @include flexbox;
+  //         justify-content: flex-start;
+
+  //         color: rgba($color: $grey, $alpha: 0.5);
+
+  //         font-size: 11px;
+
+  //         p {
+  //           padding-left: 5px;
+  //         }
+  //       }
+  //     }
+  //     .feed__item__bookmark {
+  //       // background-color: lightgreen;
+  //       height: 100%;
+  //       width: 30px;
+  //       @include flexbox;
+
+  //       .icon__bookmarkEmpty {
+  //         color: $green;
+  //         cursor: pointer;
+  //       }
+  //       .icon__bookmarkFill {
+  //         color: $green;
+  //         cursor: pointer;
+  //       }
+  //     }
+  //   }
+  //   .feed__item__image {
+  //     width: 250px;
+  //     height: 175px;
+  //     // background-color: lightblue;
+
+  //     img {
+  //       width: 249px;
+  //       height: 175px;
+  //       object-fit: cover;
+  //       object-position: center;
+  //     }
+  //   }
+  //   .feed__item__title {
+  //     width: 100%;
+  //     height: 40px;
+  //     // background-color: lightyellow;
+  //     @include flexbox;
+  //     p {
+  //       color: $green;
+  //       font-size: 14px;
+  //       text-align: center;
+  //       padding: 0px 5px;
+  //     }
+  //   }
+  //   .feed__item__description {
+  //     width: 100%;
+  //     height: 70px;
+  //     // background-color: lightpink;
+  //     @include flexbox;
+  //     align-items: flex-start;
+  //     p {
+  //       color: $grey;
+  //       font-size: 12px;
+  //       text-align: center;
+  //       padding: 0px 5px;
+  //     }
+  //   }
+  //   .feed__item__ratings {
+  //     // background-color: lightgreen;
+  //     height: 40px;
+  //     width: 100%;
+  //     @include flexbox;
+  //     .feed__item__heart {
+  //       width: 110px;
+  //       height: 100%;
+  //       // background-color: lightcoral;
+  //       @include flexbox;
+
+  //       .feed__item__heart__icon {
+  //         width: 40px;
+  //         height: 100%;
+  //         // background-color: lightgrey;
+  //         @include flexbox;
+  //         cursor: pointer;
+
+  //         .icon__heartEmpty {
+  //           color: $grey;
+  //         }
+  //         .icon__heartFill {
+  //           color: $red;
+  //         }
+  //       }
+  //       .feed__item__heart__text {
+  //         width: 70px;
+  //         height: 100%;
+  //         // background-color: lightyellow;
+  //         @include flexbox;
+
+  //         p {
+  //           font-size: 11px;
+  //           color: $grey;
+  //         }
+  //       }
+  //     }
+  //     .feed__item__stars {
+  //       width: 140px;
+  //       height: 100%;
+  //       // background-color: lightblue;
+  //       @include flexbox;
+  //       .feed__item__stars__text {
+  //         width: 40px;
+  //         // background-color: lightslategray;
+  //         height: 100%;
+  //         @include flexbox;
+
+  //         p {
+  //           font-size: 11px;
+  //           color: $grey;
+  //         }
+  //       }
+  //       .feed__item__stars__icon {
+  //         width: 100px;
+  //         // background-color: lightyellow;
+  //         height: 100%;
+  //         @include flexbox;
+  //       }
+  //     }
+  //   }
+  // }
+}
+
+//Media Queries
+
+// ----- WIDTH -----
+
+// MAX-WIDTH : 600px
+@media (max-width: "600px") {
+  .feed {
+    grid-template-columns: 100%;
+    .card {
+      margin: 0px auto;
+    }
+  }
+}

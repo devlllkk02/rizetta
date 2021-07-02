@@ -1,0 +1,200 @@
+/* ------ Card------*/
+@import "../../Theme.scss";
+
+.card {
+  width: 250px;
+  height: 400px;
+  // background-color: lightcoral;
+  border: 1px solid rgba($color: $grey, $alpha: 0.2);
+
+  // &:nth-child(odd) {
+  //   background-color: teal;
+  // }
+
+  .card__header {
+    width: 100%;
+    height: 50px;
+    // background-color: lightpink;
+    @include flexbox;
+    .card__user__image {
+      // background-color: lightcoral;
+      width: 50px;
+      height: 50px;
+
+      @include flexbox;
+      img {
+        height: 40px;
+        width: 40px;
+
+        object-fit: cover;
+        object-position: center;
+
+        border-radius: 50%;
+
+        //   border: 2px solid rgba($color: $green, $alpha: 0.8);
+      }
+    }
+
+    .card__user__details {
+      // background-color: lightyellow;
+      width: 170px;
+      height: 50px;
+      @include flexbox;
+      flex-direction: column;
+      .card__user__name {
+        width: 100%;
+        height: 20px;
+        // background-color: lightgreen;
+        @include flexbox;
+        justify-content: flex-start;
+
+        p {
+          color: $grey;
+          font-size: 12px;
+          padding-left: 5px;
+        }
+      }
+      .card__user__date {
+        width: 100%;
+        height: 20px;
+        // background-color: thistle;
+        @include flexbox;
+        justify-content: flex-start;
+        color: rgba($color: $grey, $alpha: 0.5);
+        font-size: 11px;
+        padding-left: 5px;
+        p {
+          padding-left: 5px;
+        }
+      }
+    }
+    .card__bookmark {
+      // background-color: lightgreen;
+      height: 100%;
+      width: 30px;
+      @include flexbox;
+
+      .icon__bookmarkEmpty {
+        color: $green;
+        cursor: pointer;
+      }
+      .icon__bookmarkFill {
+        color: $green;
+        cursor: pointer;
+      }
+    }
+  }
+  .card__image {
+    width: 250px;
+    height: 175px;
+    // background-color: lightblue;
+    overflow: hidden;
+    img {
+      width: 249px;
+
+      height: 175px;
+      object-fit: cover;
+      object-position: center;
+      transition: all 0.5s ease-in-out;
+      overflow: hidden;
+      &:hover {
+        transform: scale(1.1);
+        // margin-right: 10px;
+      }
+    }
+  }
+  .card__title {
+    width: 100%;
+    height: 60px;
+    // background-color: lightyellow;
+    @include flexbox;
+    p {
+      color: $green;
+      font-size: 14px;
+      text-align: center;
+      padding: 0px 5px;
+    }
+  }
+  .card__description {
+    width: 100%;
+    height: 75px;
+    // background-color: lightpink;
+    @include flexbox;
+    align-items: flex-start;
+    p {
+      color: $grey;
+      font-size: 12px;
+      text-align: center;
+      padding: 0px 5px;
+    }
+  }
+  .card__ratings {
+    // background-color: lightgreen;
+    height: 40px;
+    width: 100%;
+    @include flexbox;
+    .card__heart {
+      width: 110px;
+      height: 100%;
+      // background-color: lightcoral;
+      @include flexbox;
+
+      .card__heart__icon {
+        width: 40px;
+        height: 100%;
+        // background-color: lightgrey;
+        @include flexbox;
+        cursor: pointer;
+
+        .icon__heartEmpty {
+          color: $grey;
+        }
+        .icon__heartFill {
+          color: $red;
+        }
+      }
+      .card__heart__text {
+        width: 70px;
+        height: 100%;
+        // background-color: lightyellow;
+        @include flexbox;
+
+        p {
+          font-size: 11px;
+          color: $grey;
+        }
+      }
+    }
+    .card__stars {
+      width: 140px;
+      height: 100%;
+      // background-color: lightblue;
+      @include flexbox;
+      .card__stars__text {
+        width: 40px;
+        // background-color: lightslategray;
+        height: 100%;
+        @include flexbox;
+
+        p {
+          font-size: 11px;
+          color: $grey;
+        }
+      }
+      .card__stars__icon {
+        width: 100px;
+        // background-color: lightyellow;
+        height: 100%;
+        @include flexbox;
+      }
+    }
+  }
+
+  // &:hover > p{
+  //   .card__ratings{
+  //     display: none;
+  //   }
+  // }
+}
+
+

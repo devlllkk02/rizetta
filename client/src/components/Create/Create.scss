@@ -1,0 +1,183 @@
+/* ------ Create------*/
+@import "../../Theme.scss";
+
+.create {
+  width: 90%;
+    // background-color: lightcoral;
+  margin: 0px auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  @include flexbox;
+  align-items: flex-start;
+  .create__container {
+    // background-color: lightgreen;
+    width: 500px;
+    height: 100%;
+    padding: 20px;
+    border: 1px solid rgba($color: $grey, $alpha: 0.2);
+
+    .create__heading {
+      //   background-color: pink;
+      color: $green;
+      font-weight: 400;
+    }
+    .create__topic {
+      width: 100%;
+      //   background-color: lightblue;
+      @include flexbox;
+
+      h2 {
+        color: $orange;
+      }
+    }
+
+    .create__title {
+      margin: 10px 0px;
+      //   background-color: lightyellow;
+      input {
+        @include textbox;
+        margin-top: 10px;
+      }
+    }
+    .create__description {
+      margin: 10px 0px;
+      //   background-color: lightyellow;
+      input {
+        @include textbox;
+        margin-top: 10px;
+      }
+    }
+    .create__ingredients {
+      margin: 10px 0px;
+      //   background-color: lightyellow;
+      textarea {
+        @include textbox;
+        margin-top: 10px;
+        min-height: 200px;
+        resize: vertical;
+        color: $grey;
+      }
+    }
+    .create__instructions {
+      margin: 10px 0px;
+      //   background-color: lightyellow;
+      textarea {
+        @include textbox;
+        margin-top: 10px;
+        min-height: 200px;
+        resize: vertical;
+        color: $grey;
+      }
+    }
+    .create__upload {
+      //   background-color: pink;
+      margin-top: 20px;
+      @include flexbox;
+      .create__upload__button {
+        height: 100%;
+        width: 130px;
+        // background-color: lightcoral;
+        @include flexbox;
+        padding-right: 10px;
+        label {
+          @include flexbox;
+          width: 100%;
+          padding: 8px 5px;
+          background-color: $green;
+          color: $white;
+
+          border: 2px solid rgba($color: $green, $alpha: 1);
+          border-radius: 20px;
+          font-size: 14px;
+          font-weight: 600;
+          transition: all 0.5s ease-in-out;
+          &:hover {
+            cursor: pointer;
+            border: 2px solid $green;
+            color: $green;
+            background-color: transparent;
+          }
+        }
+      }
+      .create__upload__text {
+        height: 100%;
+        width: calc(100% - 130px);
+        // background-color: lightcyan;
+        @include flexbox;
+        input[type="file"] {
+          display: none;
+        }
+        input[type="text"] {
+          @include textbox;
+        }
+      }
+    }
+
+    .create__image {
+      width: 100%;
+      //   background-color: lightblue;
+      @include flexbox;
+      margin-top: 20px;
+
+      .create__image__null {
+        height: 250px;
+        width: 100%;
+        // background-color: lightblue;
+        border: 2px solid rgba($color: $grey, $alpha: 0.2);
+        border-style: dashed;
+        @include flexbox;
+        flex-direction: column;
+        .create__image__null__image {
+          .create__image__null__image__icon {
+            color: $grey;
+            font-size: 48px;
+          }
+        }
+        p {
+          margin-top: 30px;
+          font-size: 14px;
+          color: $grey;
+        }
+      }
+      img {
+        height: 250px;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+
+    .create__buttons {
+      //   background-color: pink;
+      width: 100%;
+      height: 100px;
+      @include flexbox;
+      .create__button__cancel {
+        margin-right: 10px;
+        button {
+          @include ButtonGreenLight;
+        }
+      }
+      .create__button__create {
+        margin-left: 10px;
+        button {
+          @include ButtonGreenDark;
+        }
+      }
+    }
+  }
+}
+
+
+//Media Queries
+
+// ----- WIDTH -----
+
+// MAX-WIDTH : 600px
+@media (max-width: "600px"){
+  .create{
+    .create__container{
+      width: 90%;
+    }
+  }
+}

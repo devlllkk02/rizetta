@@ -1,0 +1,260 @@
+/* ------ Sign Up ------*/
+@import "../../Theme.scss";
+
+.signup {
+  background-image: url("../BackgroundImages/Background1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  @include flexbox;
+
+  .signup__container {
+    height: 525px;
+    width: 500px;
+    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba($color: $white, $alpha: 0.4);
+
+    .signup__form {
+      // background-color: lightblue;
+      width: 100%;
+      height: 100%;
+      padding: 30px;
+
+      .signup__form__header {
+        width: 100%;
+        height: 50px;
+        // background-color: lightgreen;
+        @include flexbox;
+
+        .sigup__form__header__image {
+          height: 70px;
+        }
+      }
+
+      .signup__form__body {
+        margin-top: 20px;
+        .signup__body__item {
+          width: 100%;
+          height: 55px;
+          // background-color: lightyellow;
+          @include flexbox;
+          // &:nth-child(odd) {
+          //   background-color: lightcoral;
+          // }
+        }
+        .signup__name {
+          .signup__name__first {
+            width: 50%;
+            height: 100%;
+            // background-color: lightgreen;
+            @include flexbox;
+            padding-right: 5px;
+            input {
+              @include textbox;
+            }
+          }
+          .signup__name__last {
+            width: 50%;
+            height: 100%;
+            // background-color: lightgrey;
+            @include flexbox;
+            padding-left: 5px;
+            input {
+              @include textbox;
+            }
+          }
+        }
+
+        .signup__email,
+        .signup__password,
+        .signup__conpassword {
+          input {
+            @include textbox;
+          }
+        }
+
+        .signup__upload {
+          .signup__upload__button {
+            height: 100%;
+            width: 30%;
+            // background-color: lightgreen;
+            @include flexbox;
+            padding-right: 10px;
+            label {
+              @include flexbox;
+              width: 100%;
+              padding: 8px 5px;
+              background-color: $green;
+              color: $white;
+
+              border: 2px solid rgba($color: $green, $alpha: 1);
+              border-radius: 20px;
+              font-size: 14px;
+              font-weight: 600;
+              transition: all 0.5s ease-in-out;
+              &:hover {
+                cursor: pointer;
+                border: 2px solid $green;
+                color: $green;
+                background-color: transparent;
+              }
+            }
+          }
+          .signup__upload__text {
+            height: 100%;
+            width: 70%;
+            // background-color: lightcyan;
+            @include flexbox;
+            input[type="file"] {
+              display: none;
+            }
+            input[type="text"] {
+              @include textbox;
+            }
+          }
+        }
+      }
+
+      .signup__button {
+        width: 100%;
+        height: 55px;
+        // background-color: lightgreen;
+        margin-top: 10px;
+        @include flexbox;
+        button {
+          @include ButtonGreenDark;
+          width: 150px;
+        }
+      }
+
+      .signup__links {
+        width: 100%;
+        height: 75px;
+        // background-color: lightcoral;
+        margin-top: 5px;
+        @include flexbox;
+        flex-direction: column;
+        p {
+          text-align: center;
+          font-size: 14px;
+          color: $grey;
+        }
+
+        .signup__link {
+          width: 100%;
+          font-size: 14px;
+          text-decoration: none;
+          color: $orange;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+//Media Queries
+
+// ----- WIDTH -----
+
+// MAX-WIDTH : 600px
+@media (max-width: "600px") {
+  .signup {
+    .signup__container {
+      width: 450px;
+
+      .signup__form {
+        .signup__form__header {
+          .sigup__form__header__image {
+            height: 60px;
+          }
+        }
+        .signup__form__body {
+          .signup__upload {
+            .signup__upload__button {
+              width: 130px;
+            }
+            .signup__upload__text {
+              width: calc(100% - 130px);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// MAX-WIDTH : 500px
+@media (max-width: "500px") {
+  .signup {
+    .signup__container {
+      width: 400px;
+
+      .signup__form {
+        .signup__form__header {
+          .sigup__form__header__image {
+            height: 50px;
+          }
+        }
+        .signup__form__body {
+          .signup__upload {
+            .signup__upload__button {
+              width: 130px;
+            }
+            .signup__upload__text {
+              width: calc(100% - 130px);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// MAX-WIDTH : 400px
+@media (max-width: "400px") {
+  .signup {
+    .signup__container {
+      width: 90%;
+      height: 600px;
+      .signup__form {
+        .signup__form__header {
+          .sigup__form__header__image {
+            height: 40px;
+          }
+        }
+        .signup__form__body {
+          .signup__name {
+            flex-direction: column;
+            height: 110px;
+            .signup__name__first {
+              width: 100%;
+              padding: 0px;
+            }
+            .signup__name__last {
+              width: 100%;
+              padding: 0px;
+            }
+          }
+          .signup__upload {
+            .signup__upload__button {
+              width: 130px;
+            }
+            .signup__upload__text {
+              width: calc(100% - 130px);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//Media Queries
+
+// ----- HEIGHT -----
+// MAX-HEIGHT : 400px
+@media (max-height: "400px") {
+  .signup {
+    height: calc(2* 100vh);
+  }
+}

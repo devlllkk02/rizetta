@@ -1,0 +1,86 @@
+// Colors
+$orange: #e16120;
+$green: #4b9b96;
+$grey: #4a4a4a;
+$red: #ff4242;
+
+$white: #ffffff;
+$black: #000000;
+
+//Fonts Family
+
+textarea,button{
+  font-family: "Poppins";
+}
+
+// Mixins
+
+// ? Flexbox
+@mixin flexbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// ? Textbox
+
+@mixin textbox {
+  width: 100%;
+  padding: 10px 20px;
+  border: 1px solid rgba($color: $grey, $alpha: 0.4);
+  border-radius: 20px;
+  font-size: 14px;
+  color: $grey;
+  &:focus {
+    outline: none;
+    border: 1px solid $green;
+  }
+}
+
+// ? Button - Green DARK
+
+@mixin ButtonGreenDark {
+  @include flexbox;
+  outline: none;
+  width: 100%;
+  min-width: 100px;
+  padding: 8px 10px;
+  background-color: $green;
+  color: $white;
+
+  border: 2px solid $green;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.5s ease-in-out;
+  &:hover {
+    cursor: pointer;
+    border: 2px solid $green;
+    color: $green;
+    background-color: rgba($color: $white, $alpha: 0.3);
+  }
+}
+
+// ? Button - Green LIGHT
+
+@mixin ButtonGreenLight {
+  @include flexbox;
+  outline: none;
+  width: 100%;
+  min-width: 100px;
+  padding: 8px 10px;
+  background-color: rgba($color: $white, $alpha: 0.3);
+  color: $green;
+
+  border: 2px solid $green;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.5s ease-in-out;
+  &:hover {
+    cursor: pointer;
+    border: 2px solid $green;
+    color: $white;
+    background-color: $green;
+  }
+}

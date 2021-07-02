@@ -1,0 +1,176 @@
+/* ------ Follwers ------*/
+@import "../../../Theme.scss";
+
+.following {
+  // background-color: lightblue;
+  width: 100%;
+
+  margin-top: 20px;
+  .following__container {
+    width: 500px;
+    // background-color: lightgreen;
+    margin: 0px auto;
+
+    .following__userimage {
+      // background-color: lightcoral;
+      img {
+        height: 140px;
+        width: 140px;
+        border-radius: 50%;
+        border: 3px solid $orange;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+    .following__username {
+      height: 50px;
+      @include flexbox;
+
+      p {
+        font-size: 18px;
+        color: $green;
+        text-align: center;
+      }
+    }
+
+    .following__nav {
+      // background-color: lightseagreen;
+      width: 100%;
+      height: 50px;
+      @include flexbox;
+      .following__nav__left {
+        // background-color: lightgrey;
+        height: 100%;
+        width: 50%;
+        @include flexbox;
+
+        p {
+          color: $orange;
+          font-size: 14px;
+          font-weight: 500;
+          cursor: pointer;
+        }
+      }
+      .following__nav__right {
+        // background-color: lightyellow;
+        height: 100%;
+        width: 50%;
+        @include flexbox;
+
+        p {
+          color: $orange;
+          font-size: 14px;
+          font-weight: 500;
+          cursor: pointer;
+        }
+      }
+    }
+    .following__border {
+      // background-color: lightseagreen;
+      width: 100%;
+      height: 5px;
+      @include flexbox;
+
+      .following__border__left {
+        height: 100%;
+        width: 50%;
+        border-bottom: 2px solid rgba($color: $orange, $alpha: 0.4);
+      }
+      .following__border__right {
+        // background-color: lightyellow;
+        background-color: $orange;
+
+        height: 100%;
+        width: 50%;
+        border-bottom: 2px solid rgba($color: $orange, $alpha: 1);
+      }
+    }
+
+    .following__list {
+      min-height: 200px;
+      width: 100%;
+      // background-color: lightgreen;
+      .following__item {
+        // background-color: lightyellow;
+        width: 100%;
+        height: 70px;
+        margin-top: 2px;
+        border-bottom: 1px solid rgba($color: $grey, $alpha: 0.2);
+
+        @include flexbox;
+        .following__item__image {
+          // background-color: teal;
+          height: 100%;
+          width: 70px;
+          @include flexbox;
+          img {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center;
+          }
+        }
+        .following__item__name {
+          $width: 200px;
+          // background-color: pink;
+          height: 100%;
+          width: calc(100% - 175px);
+          @include flexbox;
+          justify-content: flex-start;
+
+          p {
+            color: $grey;
+            font-size: 14px;
+          }
+        }
+        .following__item__button {
+          // background-color: teal;
+          height: 100%;
+          width: 125px;
+          @include flexbox;
+          button {
+            @include ButtonGreenDark;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+// ----- WIDTH -----
+
+// MAX-WIDTH : 600px
+@media (max-width: "600px") {
+  .following {
+    .following__container {
+      width: 90%;
+    }
+  }
+}
+
+// MAX-WIDTH : 400px
+@media (max-width: "400px") {
+  .following {
+    .following__container {
+      .following__list {
+        .following__item {
+          .following__item__image {
+            width: 70px;
+          }
+          .following__item__name {
+            width: calc(100% - 170px);
+
+          }
+          .following__item__button {
+            width: 100px;
+          }
+        }
+      }
+    }
+  }
+}

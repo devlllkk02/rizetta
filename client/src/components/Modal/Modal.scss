@@ -1,0 +1,99 @@
+/* ------ Modal ------*/
+@import "../../Theme.scss";
+
+.modal {
+  height: 100%;
+  width: 100%;
+  background-color: rgba($color: $grey, $alpha: 0.8);
+  position: fixed;
+  top: 0px;
+
+  z-index: 20;
+  @include flexbox;
+  .modal__container {
+    width: 500px;
+    height: 300px;
+    background-color: $white;
+    padding: 20px;
+    border: 1px solid rgba($color: $grey, $alpha: 0.2);
+    .modal__logo {
+      //   background-color: lightgreen;
+      width: 200px;
+      margin: 0px auto;
+    }
+
+    .modal__pleasewait {
+      // background-color: lightcoral;
+      p {
+        text-align: center;
+        color: $grey;
+        font-size: 14px;
+      }
+    }
+    .modal__message {
+      // background-color: lightgreen;
+      margin-top: 10px;
+      p {
+        text-align: center;
+        color: $orange;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+//Media Queries
+
+// ----- WIDTH -----
+
+// MAX-WIDTH : 600px
+@media (max-width: "600px") {
+  .modal {
+    .modal__container {
+      width: 90%;
+    }
+  }
+}
+// MAX-HEIGHT: 350px
+@media (max-height: "350px") {
+  .modal {
+    .modal__container {
+      height: 90%;
+      display: flex;
+      flex-direction: column;
+
+      .modal__logo {
+        width: 150px;
+      }
+    }
+  }
+}
+// MAX-HEIGHT: 300px
+@media (max-height: "300px") {
+    .modal {
+      .modal__container {
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+  
+        .modal__logo {
+          width: 125px;
+        }
+      }
+    }
+  }
+// MAX-HEIGHT: 250px
+@media (max-height: "250px") {
+    .modal {
+      .modal__container {
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+  
+        .modal__logo {
+          width: 100px;
+        }
+      }
+    }
+  }
+  

@@ -1,0 +1,192 @@
+/* ------ Home Intro ------*/
+@import "../../../Theme.scss";
+
+.home__intro {
+  background-image: url("../HomeBG/Home_Intro.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+
+  @include flexbox;
+
+  .home__intro__container {
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 500px;
+    width: 90%;
+    background-color: rgba($color: $green, $alpha: 0.5);
+    border: 7px solid rgba($color: $white, $alpha: 0.4);
+    @include flexbox;
+    .home__intro__container__box {
+      width: 100%;
+      // background-color: lightcoral;
+      .home__intro__container__title {
+        // background-color: lightgreen;
+        height: 100px;
+        font-weight: bold;
+        font-size: 48px;
+        width: 100%;
+        text-align: center;
+        color: $white;
+        @include flexbox;
+      }
+
+      .home__intro__container__content {
+        // background-color: lightcoral;
+        width: 100%;
+        height: 200px;
+        @include flexbox;
+
+        p {
+          text-align: center;
+          padding: 0px 20px;
+          color: $white;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+//Media Queries
+
+// ----- WIDTH -----
+
+// MAX-WIDTH : 700px
+@media (max-width: "700px") {
+  .home__intro {
+    .home__intro__container {
+      .home__intro__container__box {
+        .home__intro__container__title {
+          font-size: 36px;
+        }
+        .home__intro__container__content {
+          height: 275px;
+        }
+      }
+    }
+  }
+}
+// MAX-WIDTH : 500px
+@media (max-width: "500px") {
+  .home__intro {
+    .home__intro__container {
+      .home__intro__container__box {
+        .home__intro__container__title {
+          height: 80px;
+          font-size: 28px;
+        }
+        .home__intro__container__content {
+          height: 300px;
+          p {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+// MAX-WIDTH : 350px
+@media (max-width: "350px") {
+  .home__intro {
+    .home__intro__container {
+      .home__intro__container__box {
+        .home__intro__container__title {
+          height: 70px;
+          font-size: 28px;
+        }
+        .home__intro__container__content {
+          height: 350px;
+          p {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// ----- HEIGHT -----
+
+// MAX-HEIGHT : 550px
+@media (max-height: "550px") {
+  .home__intro {
+    height: calc(1.3 * 100vh);
+    .home__intro__container {
+      .home__intro__container__box {
+        .home__intro__container__title {
+          font-size: 36px;
+        }
+        .home__intro__container__content {
+          height: 275px;
+        }
+      }
+    }
+  }
+}
+
+// MAX-HEIGHT : 450px
+@media (max-height: "450px") {
+  .home__intro {
+    height: calc(1.6 * 100vh);
+    .home__intro__container {
+      .home__intro__container__box {
+        .home__intro__container__title {
+          font-size: 36px;
+        }
+        .home__intro__container__content {
+          height: 275px;
+        }
+      }
+    }
+  }
+}
+// MAX-HEIGHT : 350px
+@media (max-height: "350px") {
+  .home__intro {
+    height: calc(1.8 * 100vh);
+    .home__intro__container {
+      height: 400px;
+      .home__intro__container__box {
+        .home__intro__container__title {
+          font-size: 36px;
+        }
+        .home__intro__container__content {
+          height: 275px;
+        }
+      }
+    }
+  }
+}
+
+// @media only screen and (max-width: 900px) {
+//   .home__intro__container {
+//     margin-top: 100px;
+//     max-height: 1200px;
+//   }
+// }
+
+// @media only screen and (max-width: 600px) {
+//   .home__intro__container__title {
+//     font-size: 32px;
+//     line-height: 48px;
+//   }
+// }
+
+// @media only screen and (max-width: 600px) {
+//   .home__intro__container__content {
+//     font-size: 12px;
+//     line-height: 27px;
+//   }
+// }
+// @media only screen and (max-width: 900px) {
+//   .home__intro {
+//     height: 110vh;
+//   }
+// }

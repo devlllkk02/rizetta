@@ -1,0 +1,286 @@
+/* ------ Navbar ------*/
+@import "../../Theme.scss";
+
+.navbar {
+  width: 100%;
+  height: 70px;
+  // background-color: lightgreen;
+  @include flexbox;
+  background-color: $white;
+
+  border-bottom: 1px solid rgba($color: $grey, $alpha: 0.2);
+  position: fixed;
+  z-index: 10;
+  top: 0px;
+
+  .navbar__container {
+    width: 90%;
+    height: 70px;
+    // background-color: lightcoral;
+    @include flexbox;
+    .navbar__logo {
+      height: 70px;
+      width: 110px;
+      // background-color: lightgrey;
+      @include flexbox;
+      justify-content: flex-start;
+
+      img {
+        height: 30px;
+      }
+    }
+
+    .navbar__links {
+      height: 70px;
+      width: calc(100% - 360px);
+      // background-color: lightsalmon;
+      @include flexbox;
+      justify-content: flex-end;
+
+      .navbar__link__search {
+        width: 50px;
+        height: 70px;
+        // background-color: slategrey;
+        @include flexbox;
+        color: rgba($color: $green, $alpha: 0.4);
+
+        cursor: pointer;
+      }
+
+      .navbar__link__bookmark {
+        width: 50px;
+        height: 70px;
+        // background-color: coral;
+        @include flexbox;
+        color: rgba($color: $green, $alpha: 0.4);
+        cursor: pointer;
+      }
+      .navbar__link__create {
+        width: 50px;
+        height: 70px;
+        // background-color: slategrey; 
+        @include flexbox;
+        color: rgba($color: $green, $alpha: 0.4);
+
+        cursor: pointer;
+      }
+    }
+
+    .navbar__user {
+      height: 70px;
+      width: 250px;
+      // background-color: lightpink; 
+      @include flexbox;
+      .navbar__user__image {
+        // background-color: mediumturquoise;
+        height: 100%;
+        width: 60px;
+        @include flexbox;
+        img {
+          height: 45px;
+          width: 45px;
+
+          object-fit: cover;
+          object-position: center;
+
+          border-radius: 50%;
+
+          border: 2px solid rgba($color: $green, $alpha: 0.8);
+        }
+      }
+      .navbar__user__details {
+        // background-color: limegreen;
+        height: 100%;       
+        width: 190px;
+        @include flexbox;
+        flex-direction: column;
+        .navbar__user__name {
+          height: 30px;
+          width: 100%;
+          // background-color: lightseagreen;
+          @include flexbox;
+          justify-content: flex-start;
+          align-items: flex-end;
+
+          p {
+            color: $grey;
+            font-size: 12px;
+            padding-left: 5px;
+          }
+          .navbar__user__name__link {
+            text-decoration: none;
+            p {
+              color: $grey;
+            }
+          }
+        }
+        .navbar__user__status {
+          height: 30px;
+          width: 100%;
+          // background-color: lightsalmon;
+          @include flexbox;
+          justify-content: flex-start;
+          align-items: flex-start;
+
+          p {
+            color: $orange;
+            font-size: 11px;
+            cursor: pointer;
+            padding-left: 5px;
+            transition: color 0.5s ease-in-out;
+            &:hover {
+              color: $green;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.navbar__spacer {
+  height: 70px;
+  width: 100%;
+}
+
+//Media Queries
+
+// ----- WIDTH -----
+
+// MAX-WIDTH : 600px
+@media (max-width: "600px") {
+  .navbar {
+    .navbar__container {
+      .navbar__logo {
+        width: 80px;
+        img {
+          height: 22px;
+        }
+      }
+      .navbar__links {
+        width: calc(100% - 290px);
+      }
+      .navbar__user {
+        width: 210px;
+        .navbar__user__image {
+          width: 70px;
+        }
+        .navbar__user__details {
+          width: 180px;
+        }
+      }
+    }
+  }
+}
+// MAX-WIDTH : 500px
+@media (max-width: "500px") {
+  .navbar {
+    .navbar__container {
+      .navbar__logo {
+        width: 80px;
+        img {
+          height: 22px;
+        }
+      }
+      .navbar__links {
+        width: calc(100% - 260px);
+
+        .navbar__link__search,
+        .navbar__link__bookmark,
+        .navbar__link__create {
+          width: 30px;
+        }
+      }
+      .navbar__user {
+        width: 180px;
+        .navbar__user__image {
+          width: 60px;
+          img{
+            height: 35px;
+            width: 35px;
+          }
+        }
+        .navbar__user__details {
+          width: 120px;
+        }
+      }
+    }
+  }
+}
+// MAX-WIDTH : 400px
+@media (max-width: "400px") {
+  .navbar {
+    .navbar__container {
+      .navbar__logo {
+        width: 80px;
+        img {
+          height: 22px;
+        }
+      }
+      .navbar__links {
+        width: calc(100% - 230px);
+
+        .navbar__link__search,
+        .navbar__link__bookmark,
+        .navbar__link__create {
+          width: 25px;
+        }
+      }
+      .navbar__user {
+        width: 150px;
+        .navbar__user__image {
+          width: 50px;
+          img{
+            height: 35px;
+            width: 35px;
+          }
+        }
+        .navbar__user__details {
+          width: 100px;
+          .navbar__user__name{
+            p{
+              font-size: 11px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// MAX-WIDTH : 350px
+@media (max-width: "350px") {
+  .navbar {
+    .navbar__container {
+      .navbar__logo {
+        width: 65px;
+        img {
+          height: 16px;
+        }
+      }
+      .navbar__links {
+        width: calc(100% - 215px);
+
+        .navbar__link__search,
+        .navbar__link__bookmark,
+        .navbar__link__create {
+          width: 20px;
+          font-size: 12px;
+        }
+      }
+      .navbar__user {
+        width: 150px;
+        .navbar__user__image {
+          width: 50px;
+          img{
+            height: 35px;
+            width: 35px;
+
+          }
+        }
+        .navbar__user__details {
+          width: 100px;
+        }
+      }
+    }
+  }
+}

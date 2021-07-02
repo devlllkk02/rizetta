@@ -1,0 +1,317 @@
+/* ------ Search Recipe------*/
+@import "../../../Theme.scss";
+
+.searchRecipe {
+  width: 100%;
+  min-height: 600px;
+  // background-color: lightcoral;
+  margin-top: 20px;
+
+  .searchRecipe__searchbar {
+    // background-color: lightgreen;
+    width: 500px;
+    height: 60px;
+    margin: 0px auto;
+    // background-color: lightpink;
+    @include flexbox;
+    position: relative;
+
+    input {
+      @include textbox;
+      padding-right: 35px;
+    }
+
+    .icon__search {
+      position: absolute;
+      right: 15px;
+
+      color: rgba($color: $green, $alpha: 0.4);
+    }
+  }
+
+  .searchRecipe__nav {
+    width: 500px;
+    height: 50px;
+    margin: 0px auto;
+    // background-color: lightpink;
+    @include flexbox;
+    .searchRecipe__nav__left {
+      //   background-color: lightgrey;
+      width: 50%;
+      height: 100%;
+      @include flexbox;
+
+      p {
+        color: $orange;
+        font-size: 14px;
+        font-weight: 500;
+        cursor: pointer;
+      }
+    }
+    .searchRecipe__nav__right {
+      //   background-color: lightseagreen;
+      width: 50%;
+      height: 100%;
+      @include flexbox;
+
+      p {
+        color: $orange;
+        font-size: 14px;
+        font-weight: 500;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .searchRecipe__border {
+    // background-color: lightgreen;
+    width: 500px;
+    height: 5px;
+    margin: 0px auto;
+    @include flexbox;
+
+    .searchRecipe__border__left {
+      height: 100%;
+      width: 50%;
+      border-bottom: 2px solid rgba($color: $orange, $alpha: 0.4);
+    }
+    .searchRecipe__border__right {
+      // background-color: lightyellow;
+      background-color: $orange;
+
+      height: 100%;
+      width: 50%;
+
+      border-bottom: 2px solid rgba($color: $orange, $alpha: 1);
+    }
+  }
+
+  .searchRecipe__list {
+    width: 90%;
+    min-height: 600px;
+    margin: 0px auto;
+    margin-top: 20px;
+    // background-color: lightgreen;
+
+    .searchRecipe__list__container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 270px);
+      grid-row-gap: 30px;
+      justify-content: space-between;
+
+    /*   .searchRecipe__item {
+        width: 250px;
+        height: 375px;
+        // background-color: lightcoral;
+
+        border: 1px solid rgba($color: $grey, $alpha: 0.2);
+
+        // &:nth-child(odd) {
+        //   //   background-color: teal;
+        // }
+
+        .searchRecipe__item__header {
+          width: 100%;
+          height: 50px;
+          // background-color: lightpink;
+          @include flexbox;
+          .searchRecipe__item__user__image {
+            // background-color: lightcoral;
+            width: 50px;
+            height: 50px;
+
+            @include flexbox;
+            img {
+              height: 40px;
+              width: 40px;
+
+              object-fit: cover;
+              object-position: center;
+
+              border-radius: 50%;
+
+              //   border: 2px solid rgba($color: $green, $alpha: 0.8);
+            }
+          }
+
+          .searchRecipe__item__user__details {
+            // background-color: lightyellow;
+            width: 170px;
+            height: 50px;
+            @include flexbox;
+            flex-direction: column;
+            .searchRecipe__item__user__name {
+              width: 100%;
+              height: 20px;
+              // background-color: lightgreen;
+              @include flexbox;
+              justify-content: flex-start;
+
+              p {
+                color: $grey;
+                font-size: 12px;
+              }
+            }
+            .searchRecipe__item__user__date {
+              width: 100%;
+              height: 20px;
+              // background-color: thistle;
+              @include flexbox;
+              justify-content: flex-start;
+
+              color: rgba($color: $grey, $alpha: 0.5);
+
+              font-size: 11px;
+
+              p {
+                padding-left: 5px;
+              }
+            }
+          }
+          .searchRecipe__item__bookmark {
+            // background-color: lightgreen;
+            height: 100%;
+            width: 30px;
+            @include flexbox;
+
+            .icon__bookmarkEmpty {
+              color: $green;
+              cursor: pointer;
+            }
+            .icon__bookmarkFill {
+              color: $green;
+              cursor: pointer;
+            }
+          }
+        }
+        .searchRecipe__item__image {
+          width: 250px;
+          height: 175px;
+          // background-color: lightblue;
+
+          img {
+            width: 249px;
+            height: 175px;
+            object-fit: cover;
+            object-position: center;
+          }
+        }
+        .searchRecipe__item__title {
+          width: 100%;
+          height: 40px;
+          // background-color: lightyellow;
+          @include flexbox;
+          p {
+            color: $green;
+            font-size: 14px;
+            text-align: center;
+            padding: 0px 5px;
+          }
+        }
+        .searchRecipe__item__description {
+          width: 100%;
+          height: 70px;
+          // background-color: lightpink;
+          @include flexbox;
+          align-items: flex-start;
+          p {
+            color: $grey;
+            font-size: 12px;
+            text-align: center;
+            padding: 0px 5px;
+          }
+        }
+        .searchRecipe__item__ratings {
+          // background-color: lightgreen;
+          height: 40px;
+          width: 100%;
+          @include flexbox;
+          .searchRecipe__item__heart {
+            width: 110px;
+            height: 100%;
+            // background-color: lightcoral;
+            @include flexbox;
+
+            .searchRecipe__item__heart__icon {
+              width: 40px;
+              height: 100%;
+              // background-color: lightgrey;
+              @include flexbox;
+              cursor: pointer;
+
+              .icon__heartEmpty {
+                color: $grey;
+              }
+              .icon__heartFill {
+                color: $red;
+              }
+            }
+            .searchRecipe__item__heart__text {
+              width: 70px;
+              height: 100%;
+              // background-color: lightyellow;
+              @include flexbox;
+
+              p {
+                font-size: 11px;
+                color: $grey;
+              }
+            }
+          }
+          .searchRecipe__item__stars {
+            width: 140px;
+            height: 100%;
+            // background-color: lightblue;
+            @include flexbox;
+            .searchRecipe__item__stars__text {
+              width: 40px;
+              // background-color: lightslategray;
+              height: 100%;
+              @include flexbox;
+
+              p {
+                font-size: 11px;
+                color: $grey;
+              }
+            }
+            .searchRecipe__item__stars__icon {
+              width: 100px;
+              // background-color: lightyellow;
+              height: 100%;
+              @include flexbox;
+            }
+          }
+        }
+      } */
+    }
+  }
+}
+
+//Media Queries
+
+// ----- WIDTH -----
+
+// MAX-WIDTH : 600px
+@media (max-width: "600px") {
+  .searchRecipe {
+    .searchRecipe__searchbar {
+      width: 90%;
+    }
+    .searchRecipe__nav {
+      width: 90%;
+    }
+    .searchRecipe__border {
+      width: 90%;
+    }
+    .searchRecipe__list {
+      width: 90%;
+
+    .searchRecipe__list__container{
+      grid-template-columns: 100%;
+      .searchRecipe__item{
+        margin: 0px auto;
+      }
+    }
+    }
+  }
+}

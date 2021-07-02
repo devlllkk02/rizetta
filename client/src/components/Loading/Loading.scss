@@ -1,0 +1,14 @@
+/* ------ Loading ------*/
+@import "../../Theme.scss";
+
+.loading {
+  width: 100%;
+  height: calc(100vh - 70px);
+//   background-color: lightgreen;
+  @include flexbox;
+  align-items: flex-start;
+  .loading__svg {
+    height: 200px;
+    margin-top: 100px;
+  }
+}

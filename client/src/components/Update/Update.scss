@@ -1,0 +1,182 @@
+/* ------ Update------*/
+@import "../../Theme.scss";
+
+.update {
+  width: 90%;
+  //   background-color: lightcoral;
+  margin: 0px auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  @include flexbox;
+  align-items: flex-start;
+  .update__container {
+    // background-color: lightgreen;
+    width: 500px;
+    height: 100%;
+    padding: 20px;
+    border: 1px solid rgba($color: $grey, $alpha: 0.2);
+
+    .update__heading {
+      //   background-color: pink;
+      color: $green;
+      font-weight: 400;
+    }
+    .update__topic {
+      width: 100%;
+      //   background-color: lightblue;
+      @include flexbox;
+
+      h2 {
+        color: $orange;
+      }
+    }
+
+    .update__title {
+      margin: 10px 0px;
+      //   background-color: lightyellow;
+      input {
+        @include textbox;
+        margin-top: 10px;
+      }
+    }
+    .update__description {
+      margin: 10px 0px;
+      //   background-color: lightyellow;
+      input {
+        @include textbox;
+        margin-top: 10px;
+      }
+    }
+    .update__ingredients {
+      margin: 10px 0px;
+      //   background-color: lightyellow;
+      textarea {
+        @include textbox;
+        margin-top: 10px;
+        min-height: 200px;
+        resize: vertical;
+        color: $grey;
+      }
+    }
+    .update__instructions {
+      margin: 10px 0px;
+      //   background-color: lightyellow;
+      textarea {
+        @include textbox;
+        margin-top: 10px;
+        min-height: 200px;
+        resize: vertical;
+        color: $grey;
+      }
+    }
+    .update__upload {
+      //   background-color: pink;
+      margin-top: 20px;
+      @include flexbox;
+      .update__upload__button {
+        height: 100%;
+        width: 130px;
+        // background-color: lightcoral;
+        @include flexbox;
+        padding-right: 10px;
+        label {
+          @include flexbox;
+          width: 100%;
+          padding: 8px 5px;
+          background-color: $green;
+          color: $white;
+
+          border: 2px solid rgba($color: $green, $alpha: 1);
+          border-radius: 20px;
+          font-size: 14px;
+          font-weight: 600;
+          transition: all 0.5s ease-in-out;
+          &:hover {
+            cursor: pointer;
+            border: 2px solid $green;
+            color: $green;
+            background-color: transparent;
+          }
+        }
+      }
+      .update__upload__text {
+        height: 100%;
+        width: calc(100% - 130px);
+        // background-color: lightcyan;
+        @include flexbox;
+        input[type="file"] {
+          display: none;
+        }
+        input[type="text"] {
+          @include textbox;
+        }
+      }
+    }
+
+    .update__image {
+      width: 100%;
+      //   background-color: lightblue;
+      @include flexbox;
+      margin-top: 20px;
+
+      .update__image__null {
+        height: 250px;
+        width: 100%;
+        // background-color: lightblue;
+        border: 2px solid rgba($color: $grey, $alpha: 0.2);
+        border-style: dashed;
+        @include flexbox;
+        flex-direction: column;
+        .update__image__null__image {
+          .update__image__null__image__icon {
+            color: $grey;
+            font-size: 48px;
+          }
+        }
+        p {
+          margin-top: 30px;
+          font-size: 14px;
+          color: $grey;
+        }
+      }
+      img {
+        height: 250px;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+
+    .update__buttons {
+      //   background-color: pink;
+      width: 100%;
+      height: 100px;
+      @include flexbox;
+      .update__button__cancel {
+        margin-right: 10px;
+        button {
+          @include ButtonGreenLight;
+        }
+      }
+      .update__button__update {
+        margin-left: 10px;
+        button {
+          @include ButtonGreenDark;
+        }
+      }
+    }
+  }
+}
+
+//Media Queries
+
+// ----- WIDTH -----
+
+// MAX-WIDTH : 600px
+@media (max-width: "600px"){
+  .cupdate{
+    .update__container{
+      width: 90%;
+    }
+  }
+}
