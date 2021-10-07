@@ -1,8 +1,6 @@
 import "./Signup.scss";
-
 import React, { useState, useEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
-
 import { ToastContainer, toast } from "react-toastify";
 import { ToastProperties } from "../../Toast";
 import "react-toastify/dist/ReactToastify.css";
