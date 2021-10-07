@@ -3,7 +3,7 @@
 
 ## UI designs
 
-You can find the relavant Figma design for the frontend [https://www.figma.com/file/CRrHKxyNpKpkl3IrtuKOTd/Rizetta_UI?node-id=0%3A1].
+You can find the relevant Figma design for the frontend [https://www.figma.com/file/CRrHKxyNpKpkl3IrtuKOTd/Rizetta_UI?node-id=0%3A1].
 
 
 ## Available Scripts
