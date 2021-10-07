@@ -1,5 +1,5 @@
 # rizetta
-`dev` branch is pipelined to https://rizetta.herokuapp.com/ on push. 
+`main` branch is pipelined to https://rizetta.herokuapp.com/ on push. 
 
 ## UI designs
 
